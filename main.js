@@ -10,7 +10,8 @@ const info = document.getElementById('info');
 const text = document.getElementsByClassName('text');
 
 input.addEventListener('keydown', function(e) {
-    if (e.keyCode === 13) { 
+    if (e.keyCode === 13) {
+        input.readOnly = true;
         if (input.value.length == 0) { 
             alert("Поле не должно быть пустым!");
             return;
@@ -42,7 +43,7 @@ input.addEventListener('keydown', function(e) {
 
             let models = 
             [
-                ["Audi A5", "Audi A6", "Audi A8", "Audi R8", "Audi S6", "Audi S7", "Audi Q3"],
+                ["Audi A5", "Audi A6", "Audi A8", "Audi Q3", "Audi R8", "Audi S6", "Audi S7"],
                 ["BMW i8", "BMW M2", "BMW M3", "BMW M4", "BMW M5", "BMW Z4"],
                 ["Ford Fiesta", "Ford Fiesta Sedan", "Ford Focus", "Ford Focus Sedan", "Ford Mondeo", "Ford Transit"],
                 ["Porsche 718 Cayman", "Porsche 911", "Porsche 911 Targa", "Porsche 918 Spyder", "Porsche Panamera", "Porsche Taycan"],
@@ -52,7 +53,7 @@ input.addEventListener('keydown', function(e) {
 
             let img = 
             [
-                ["AudiA5.jpg", "AudiA6.jpg", "AudiA8.jpg", "AudiR8.jpg", "AudiS6.jpg", "AudiS7.jpg", "Q3.jpg"],
+                ["A5.jpg", "A6.jpg", "A8.jpg", "Q3.jpg", "R8.jpg", "S6.jpg", "S7.jpg"],
                 ["BMWI8.jpg", "BMWM2.jpg", "BMWM3.jpg", "BMWM4.jpg", "BMWM5.jpg", "BMWZ4.jpg"],
                 ["FordFiesta.jpg", "FordFiestaSedan.jpg", "FordFocus.jpg", "FordFocusSedan.jpg", "FordMondeo.jpg", "FordTransit.jpg"],
                 ["Porsche718Cayman.jpg", "Porsche911.jpg", "Porsche911Targa.jpg", "Porsche918Spyder.jpg", "PorschePanamera.jpg", "PorscheTaycan.jpg"],
@@ -77,7 +78,7 @@ input.addEventListener('keydown', function(e) {
             }
 
             if (brand == "audi") {
-                for (let i = 0; i < 8; i++) {
+                for (let i = 0; i < 6; i++) {
                     models_name[i].innerHTML = models[0][i];
                     models_img[i].src = "img/audi/" + img[0][i];
                 }
@@ -129,7 +130,7 @@ input.addEventListener('keydown', function(e) {
             }
 
             if (brand == "bmw") {
-                for (let i = 0; i < 8; i++) {
+                for (let i = 0; i < 6; i++) {
                     models_name[i].innerHTML = models[1][i];
                     models_img[i].src = "img/bmw/" + img[1][i];
                 }
@@ -392,6 +393,110 @@ input.addEventListener('keydown', function(e) {
                 for (let i = 0; i < 6; i++) {
                     models_name[i].innerHTML = models[5][i];
                     models_img[i].src = "img/mercedes/" + img[5][i];
+                }
+
+                model_blocks.forEach(item => {
+                    item.addEventListener('click', () => {
+                        let model = item.querySelector('p').textContent;
+                        models_block.style = "visibility: hidden; opacity: 0;";
+                        info.style = "visibility: visible; opacity: 1;";
+
+                        if (model == "Mercedes-Benz C-class coupe") {
+                            text[0].innerHTML = "Porsche 718 Cayman";
+                            text[1].innerHTML = "Porsche 718 Cayman 2";
+                            text[2].innerHTML = "Porsche 718 Cayman 3";
+                        }
+
+                        if (model == "Mercedes-Benz CLS") {
+                            text[0].innerHTML = "Porsche 911";
+                            text[1].innerHTML = "Porsche 911 2";
+                            text[2].innerHTML = "Porsche 911 3";
+                        }
+
+                        if (model == "Mercedes-Benz G-class") {
+                            text[0].innerHTML = "Porsche 911 Targa";
+                            text[1].innerHTML = "Porsche 911 Targa 2";
+                            text[2].innerHTML = "Porsche 911 Targa 3";
+                        }
+
+                        if (model == "Mercedes-Benz Maybach") {
+                            text[0].innerHTML = "Porsche 918 Spyder";
+                            text[1].innerHTML = "Porsche 918 Spyder 2";
+                            text[2].innerHTML = "Porsche 918 Spyder 3";
+                        }
+
+                        if (model == "Mercedes-Benz S-class") {
+                            text[0].innerHTML = "Porsche Panamera";
+                            text[1].innerHTML = "Porsche Panamera 2";
+                            text[2].innerHTML = "Porsche Panamera 3";
+                        }
+
+                        if (model == "Mercedes-Benz SLS AMG") {
+                            text[0].innerHTML = "Porsche Taycan";
+                            text[1].innerHTML = "Porsche Taycan 2";
+                            text[2].innerHTML = "Porsche Taycan 3";
+                        }
+                    });
+                });
+                return;
+            }
+
+            if (brand == "nissan") {
+                for (let i = 0; i < 6; i++) {
+                    models_name[i].innerHTML = models[6][i];
+                    models_img[i].src = "img/nissan/" + img[6][i];
+                }
+
+                model_blocks.forEach(item => {
+                    item.addEventListener('click', () => {
+                        let model = item.querySelector('p').textContent;
+                        models_block.style = "visibility: hidden; opacity: 0;";
+                        info.style = "visibility: visible; opacity: 1;";
+
+                        if (model == "Mercedes-Benz C-class coupe") {
+                            text[0].innerHTML = "Porsche 718 Cayman";
+                            text[1].innerHTML = "Porsche 718 Cayman 2";
+                            text[2].innerHTML = "Porsche 718 Cayman 3";
+                        }
+
+                        if (model == "Mercedes-Benz CLS") {
+                            text[0].innerHTML = "Porsche 911";
+                            text[1].innerHTML = "Porsche 911 2";
+                            text[2].innerHTML = "Porsche 911 3";
+                        }
+
+                        if (model == "Mercedes-Benz G-class") {
+                            text[0].innerHTML = "Porsche 911 Targa";
+                            text[1].innerHTML = "Porsche 911 Targa 2";
+                            text[2].innerHTML = "Porsche 911 Targa 3";
+                        }
+
+                        if (model == "Mercedes-Benz Maybach") {
+                            text[0].innerHTML = "Porsche 918 Spyder";
+                            text[1].innerHTML = "Porsche 918 Spyder 2";
+                            text[2].innerHTML = "Porsche 918 Spyder 3";
+                        }
+
+                        if (model == "Mercedes-Benz S-class") {
+                            text[0].innerHTML = "Porsche Panamera";
+                            text[1].innerHTML = "Porsche Panamera 2";
+                            text[2].innerHTML = "Porsche Panamera 3";
+                        }
+
+                        if (model == "Mercedes-Benz SLS AMG") {
+                            text[0].innerHTML = "Porsche Taycan";
+                            text[1].innerHTML = "Porsche Taycan 2";
+                            text[2].innerHTML = "Porsche Taycan 3";
+                        }
+                    });
+                });
+                return;
+            }
+
+            if (brand == "lada") {
+                for (let i = 0; i < 6; i++) {
+                    models_name[i].innerHTML = models[7][i];
+                    models_img[i].src = "img/lada/" + img[7][i];
                 }
 
                 model_blocks.forEach(item => {
