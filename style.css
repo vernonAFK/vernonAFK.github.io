@@ -67,6 +67,8 @@ body {
     height: 14em;
     margin: 2.5% 7% 0 7%;
     border-radius: 2em;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
 
     .model p {
@@ -78,33 +80,21 @@ body {
         margin-top: 3%;
         margin-left: -55%;
         border-radius: 1em;
-        width: 45%;
+        width: 44%;
         height: 75%;
     }
 
-.buttons {
+    .model:hover {
+        transform: scale(1.03);
+    }
+
+.littleInfo {
+    font-size: 20px;
     color: #4e4e4ed2;
-    width: 50%;
+    text-align: left;
     margin-left: 50%;
-    margin-top: -25%;
-    padding-top: 10px;
+    margin-top: -24%;
 }
-
-    .buttons div {
-        border-radius: 10px;
-        padding: 14px;
-        background-color: #FAFAD2;
-        margin-bottom: 20px;
-        cursor: pointer;
-        transition: all 0.5s ease;   
-    }
-
-    .buttons div:hover {
-        transform: scale(1.04);
-    }
-
-
-
 
 #info {
     position: absolute;
@@ -114,7 +104,7 @@ body {
     height: 100vh;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .text {
