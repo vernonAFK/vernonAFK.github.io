@@ -45,10 +45,14 @@ input.addEventListener('keydown', function(e) {
 
             const models = 
             [
-                ["Audi A5", "Audi A6", "Audi A8", "Audi Q3", "Audi R8", "Audi S6"],
-                ["BMW i8", "BMW M2", "BMW M3", "BMW M4", "BMW M5", "BMW Z4"],
-                ["Ford Fiesta", "Ford Fiesta Sedan", "Ford Focus", "Ford Focus Sedan", "Ford Mondeo", "Ford Transit"],
-                ["Porsche 718 Cayman", "Porsche 911", "Porsche 911 Targa", "Porsche 918 Spyder", "Porsche Panamera", "Porsche Taycan"],
+                ["Audi A3", "Audi A4", "Audi A5 Coupe", "Audi A6", "Audi A7", "Audi A8", "Audi Q3", "Audi Q4 e-tron", "Audi Q5", "Audi Q7", "Audi Q8", "Audi RS 3", "Audi RS 5 Coupe", "Audi RS 6", "Audi RS 7", "Audi RS Q8"],
+
+                ["BMW 2 Series M240i xDrive", "BMW 3 Series M340i xDrive", "BMW 4 Series M440i xDrive", "BMW 5 Series M550i xDrive", "BMW 7 Series 760i xDrive", "BMW 8 Series M850i xDrive", "BMW M2", "BMW M3 Competition", "BMW M4 Competition", "BMW M5 Competition", "BMW M8 Competition", "BMW Z4 M40i Convertible"],
+
+                ["Ford Bronco", "Ford Mustang", "Ford Mustang Shelby GT500", "Ford Transit"],
+
+                ["Porsche 718 Boxster Spyder", "Porsche 718 Cayman GT4", "Porsche 911 Carrera 4S", "Porsche 911 Carrera S"],
+
                 ["Ferrari 458 Speciale", "Ferrari 488 GTB", "Ferrari 488 Spider", "Ferrari F12 Berlinetta", "Ferrari FF", "Ferrari LaFerrari"],
                 ["Mercedes-Benz C-class coupe", "Mercedes-Benz CLS", "Mercedes-Benz G-class", "Mercedes-Benz Maybach", "Mercedes-Benz S-class", "Mercedes-Benz SLS AMG"],
                 ["Nissan GT-R", "Nissan X-Trail", "Nissan Juke", "Nissan Patrol", "Nissan Terrano", "Nissan Almera"],
@@ -61,10 +65,14 @@ input.addEventListener('keydown', function(e) {
 
             const li = 
             [
-                ["год: 2016 <br> класс: купе <br> цена: 2 655 000 ₽", "год: 2018 <br> класс: бизнес-класс <br> цена: 3 900 000 ₽","год: 2017 <br> класс: представительский класс <br> цена: 5 935 000 ₽", "год: 2018 <br> класс: компактный SUV <br> цена: 2 325 000 ₽", "год: 2015 <br> класс: купе <br> цена: 11 200 000 ₽", "год: 2016 <br> класс: бизнес-класс <br> цена: 5 590 000 ₽"],
-                ["год: 2018 <br> класс: купе <br> цена: 9 490 000 ₽", "год: 2017 <br> класс: купе <br> цена: 3 590 000 ₽", "год: 2014 <br> класс: средний класс <br> цена: 1 950 000 ₽", "год: 2017 <br> класс: купе <br> цена: 4 680 000 ₽", "год: 2018 <br> класс: бизнес-класс <br> цена: 6 700 000 ₽", "год: 2015 <br> класс: родстеры <br> цена: 5 155 000 ₽"],
-                ["год: 2015 <br> класс: малый класс <br> цена: 785 000 ₽", "год: 2015 <br> класс: малый класс <br> цена: 699 000 ₽", "год: 2015 <br> класс: малый средний класс <br> цена: 843 000 ₽", "год: 2015 <br> класс: малый средний класс <br> цена: 990 000 ₽", "год: 2015 <br> класс: средний класс <br> цена: 1 350 000 ₽", "год: 2014 <br> класс: грузопассажирские фургоны <br> цена: 1 800 000 ₽"],
-                ["год: 2016 <br> класс: купе <br> цена: 3 811 000 ₽", "год: 2015 <br> класс: купе <br> цена: 6 319 000 ₽", "год: 2015 <br> класс: родстеры <br> цена: 7 407 000 ₽", "год: 2014 <br> класс: родстеры <br> цена: 88 305 000 ₽", "год: 2016 <br> класс: представительский класс <br> цена: 6 218 000 ₽", "год: 2019 <br> класс: представительский класс <br> цена: 7 793 000 ₽"],
+                ["год: 2023 <br> класс: седан <br> цена: 3 051 000 ₽", "год: 2023 <br> класс: седан <br> цена: 4 002 000 ₽","год: 2023 <br> класс: купе <br> цена: 6 646 000 ₽", "год: 2023 <br> класс: седан <br> цена: 5 880 000 ₽", "год: 2023 <br> класс: седан <br> цена: 8 780 000 ₽", "год: 2023 <br> класс: седан <br> цена: 11 567 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 3 535 000 ₽", "год: 2023 <br> класс: SUV EV <br> цена: 6 300 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 5 227 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 6 785 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 7 530 000 ₽", "год: 2023 <br> класс: седан <br> цена: 5 800 000 ₽", "год: 2023 <br> класс: купе <br> цена: 5 800 000 ₽", "год: 2023 <br> класс: универсал <br> цена: 9 885 000 ₽", "год: 2023 <br> класс: лифтбек <br> цена: 10 300 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 11 060 000 ₽"],
+
+                ["год: 2023 <br> класс: купе <br> цена: 6 900 000 ₽", "год: 2023 <br> класс: седан <br> цена: 8 550 000 ₽", "год: 2023 <br> класс: купе <br> цена: 	10 070 000 ₽", "год: 2023 <br> класс: седан <br> цена: 13 260 000 ₽", "год: 2023 <br> класс: седан <br> цена: 16 900 000 ₽", "год: 2023 <br> класс: купе <br> цена: 11 460 000 ₽", "год: 2023 <br> класс: купе <br> цена: 9 450 000 ₽", "год: 2023 <br> класс: седан <br> цена: 13 300 000 ₽", "год: 2023 <br> класс: купе <br> цена: 15 800 000 ₽", "год: 2023 <br> класс: седан <br> цена: 12 800 000 ₽", "год: 2023 <br> класс: купе <br> цена: 19 800 000 ₽", "год: 2023 <br> класс: родстеры <br> цена: 11 150 000 ₽"],
+
+                ["год: 2023 <br> класс: SUV <br> цена: 13 300 000 ₽", "год: 2023 <br> класс: купе <br> цена: 9 500 000 ₽", "год: 2022 <br> класс: купе <br> цена: 17 111 250 ₽", "год: 2023 <br> класс: фургон <br> цена: 7 500 000 ₽"],
+
+                ["год: 2023 <br> класс: родстеры <br> цена: 8 820 000 ₽", "год: 2023 <br> класс: купе <br> цена: 14 870 000 ₽", "год: 2023 <br> класс: купе <br> цена: 15 820 000 ₽", "год: 2023 <br> класс: купе <br> цена: 12 400 000 ₽"],
+
                 ["год: 2013 <br> класс: купе <br> цена: 25 000 000 ₽", "год: 2015 <br> класс: купе <br> цена: 17 101 000 ₽", "год: 2015 <br> класс: родстеры <br> цена: 19 050 000 ₽", "год: 2012 <br> класс: купе <br> цена: 20 173 000 ₽", "год: 2011 <br> класс: купе <br> цена: 13 500 000 ₽", "год: 2014 <br> класс: купе <br> цена: 114 550 000 ₽"],
                 ["год: 2018 <br> класс: купе <br> цена: 2 640 000 ₽", "год: 2018 <br> класс: бизнес-класс <br> цена: 4 950 000 ₽", "год: 2018 <br> класс: полноразмерные SUV <br> цена: 8 950 000 ₽", "год: 2017 <br> класс: представительский класс <br> цена: 8 700 000 ₽", "год: 2017 <br> класс: представительский класс <br> цена: 6 720 000 ₽", "год: 2009 <br> класс: купе <br> цена: 11 850 000 ₽"],
                 ["год: 2016 <br> класс: купе <br> цена: 6 875 000 ₽", "год: 2015 <br> класс: компактные SUV <br> цена: 1 790 000 ₽", "год: 2014 <br> класс: компактные SUV <br> цена: 1 107 000 ₽", "год: 2014 <br> класс: компактные SUV <br> цена: 4 750 000 ₽", "год: 2017 <br> класс: компактные SUV <br> цена: 930 000 ₽", "год: 2012 <br> класс: малый средний класс <br> цена: 645 000 ₽"],
@@ -76,10 +84,14 @@ input.addEventListener('keydown', function(e) {
 
             const img = 
             [
-                ["A5.jpg", "A6.jpg", "A8.jpg", "Q3.jpg", "R8.jpg", "S6.jpg"],
-                ["I8.jpg", "M2.jpg", "M3.jpg", "M4.jpg", "M5.jpg", "Z4.jpg"],
-                ["Fiesta.jpg", "FiestaSedan.jpg", "Focus.jpg", "FocusSedan.jpg", "Mondeo.jpg", "Transit.jpg"],
-                ["718Cayman.jpg", "911.jpg", "911Targa.jpg", "918Spyder.jpg", "Panamera.jpg", "Taycan.jpg"],
+                ["A3.webp", "A4.webp", "A5Coupe.webp", "A6.webp", "A7.webp", "A8.webp", "Q3.webp", "Q4E-tron.webp", "Q5.webp", "Q7.webp", "Q8.webp", "RS3.webp", "RS5Coupe.webp", "RS6.webp", "RS7.webp", "RSQ8.webp"],
+
+                ["2SeriesM240iXDrive.webp", "3SeriesM340iXDrive.webp", "4SeriesM440iXDrive.webp", "5SeriesM550iXDrive.webp", "7Series760iXDrive.webp", "8SeriesM850iXDrive.webp", "M2.webp", "M3Competition.webp", "M4Competition.webp", "M5Competition.webp", "M8Competition.webp", "Z4M40iConvertible.webp"],
+
+                ["Bronco.webp", "Mustang.webp", "MustangShelbyGT500.webp", "Transit.webp"],
+
+                ["718BoxsterSpyder.webp", "718CaymanGT4.webp", "911Carrera4S.webp", "911CarreraS.webp"],
+
                 ["458Speciale.jpg", "488GTB.jpg", "488Spider.jpg", "F12Berlinetta.jpg", "FF.jpg", "LaFerrari.jpg"],
                 ["Cclasscoupe.jpg", "CLS.jpg", "Gclass.jpg", "Maybach.jpg", "Sclass.jpg", "SLSAMG.jpg"],
                 ["GTR.jpg", "XTrail.jpg", "Juke.jpg", "Patrol.jpg", "Terrano.jpg", "Almera.jpg"],

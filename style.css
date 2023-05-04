@@ -63,9 +63,9 @@ body {
     text-align: center;
     padding: 1.2%;
     background-color: #ffb04865;
-    width: 36em;
+    width: 35em;
     height: 14em;
-    margin: 2.5% 7% 0 7%;
+    margin: 2% 8% 2% 8%;
     border-radius: 2em;
     cursor: pointer;
     transition: all 0.5s ease;
@@ -77,11 +77,11 @@ body {
     }
 
     .model img {
-        margin-top: 3%;
-        margin-left: -55%;
+        margin-top: 4%;
+        margin-left: -48%;
         border-radius: 1em;
-        width: 44%;
-        height: 75%;
+        width: 40%;
+        height: 70%;
     }
 
     .model:hover {
@@ -92,8 +92,8 @@ body {
     font-size: 20px;
     color: #4e4e4ed2;
     text-align: left;
-    margin-left: 50%;
-    margin-top: -24%;
+    margin-left: 55%;
+    margin-top: -22%;
 }
 
 #info {
