@@ -60,7 +60,9 @@ input.addEventListener('keydown', function(e) {
                 // FERRARI
                 ["Ferrari 488 Spider", "Ferrari 812 Superfast", "Ferrari FF"],
 
-                ["Mercedes-Benz C-class coupe", "Mercedes-Benz CLS", "Mercedes-Benz G-class", "Mercedes-Benz Maybach", "Mercedes-Benz S-class", "Mercedes-Benz SLS AMG"],
+                // MERCEDES
+                ["Mercedes-Benz A-class", "Mercedes-Benz AMG GT 53"],
+
                 ["Nissan GT-R", "Nissan X-Trail", "Nissan Juke", "Nissan Patrol", "Nissan Terrano", "Nissan Almera"],
                 ["LADA Niva Legend", "LADA Vesta Cross", "LADA Priora HB", "LADA XRAY", "LADA Kalina Sport", "LADA 4x4 Urban"],
                 ["KIA Stinger", "KIA Ceed", "KIA Rio", "KIA K5", "KIA Mohave", "KIA Picanto"],
@@ -86,7 +88,9 @@ input.addEventListener('keydown', function(e) {
                 // FERRARI
                 ["год: 2018 <br> класс: родстеры <br> цена: 24 000 000 ₽", "год: 2018 <br> класс: купе <br> цена: 26 000 000 ₽", "год: 2015 <br> класс: купе <br> цена: 18 000 000 ₽"],
 
-                ["год: 2018 <br> класс: купе <br> цена: 2 640 000 ₽", "год: 2018 <br> класс: бизнес-класс <br> цена: 4 950 000 ₽", "год: 2018 <br> класс: полноразмерные SUV <br> цена: 8 950 000 ₽", "год: 2017 <br> класс: представительский класс <br> цена: 8 700 000 ₽", "год: 2017 <br> класс: представительский класс <br> цена: 6 720 000 ₽", "год: 2009 <br> класс: купе <br> цена: 11 850 000 ₽"],
+                // MERCEDES
+                ["год: 2022 <br> класс: седан <br> цена: 3 060 000 ₽", "год: 2023 <br> класс: седан <br> цена: 28 870 000 ₽"],
+
                 ["год: 2016 <br> класс: купе <br> цена: 6 875 000 ₽", "год: 2015 <br> класс: компактные SUV <br> цена: 1 790 000 ₽", "год: 2014 <br> класс: компактные SUV <br> цена: 1 107 000 ₽", "год: 2014 <br> класс: компактные SUV <br> цена: 4 750 000 ₽", "год: 2017 <br> класс: компактные SUV <br> цена: 930 000 ₽", "год: 2012 <br> класс: малый средний класс <br> цена: 645 000 ₽"],
                 ["год: 2021 <br> класс: компактные SUV <br> цена: 659 900 ₽", "год: 2018 <br> класс: малый класс <br> цена: 763 900 ₽", "год: 2013 <br> класс: малый средний класс <br> цена: 290 000 ₽", "год: 2015 <br> класс: малый класс <br> цена: 614 900 ₽", "год: 2014 <br> класс: малый класс <br> цена: 566 900 ₽", "год: 2015 <br> класс: компактные SUV <br> цена: 546 800 ₽"],
                 ["год: 2017 <br> класс: бизнес-класс <br> цена: 1 899 000 ₽", "год: 2018 <br> класс: малый средний класс <br> цена: 1 001 000 ₽", "год: 2017 <br> класс: малый класс <br> цена: 695 900 ₽", "год: 2022 <br> класс: средний класс <br> цена: 3 569 900 ₽", "год: 2017 <br> класс: полноразмерные SUV <br> цена: 2 489 900 ₽", "год: 2017 <br> класс: субкомпактный класс <br> цена: 559 900 ₽"],
@@ -111,7 +115,9 @@ input.addEventListener('keydown', function(e) {
                 // FERRARI
                 ["488Spider.webp", "812Superfast.webp", "FF.webp"],
 
-                ["Cclasscoupe.jpg", "CLS.jpg", "Gclass.jpg", "Maybach.jpg", "Sclass.jpg", "SLSAMG.jpg"],
+                // MERCEDES
+                ["AClass.webp", "AMGGT53.webp"],
+
                 ["GTR.jpg", "XTrail.jpg", "Juke.jpg", "Patrol.jpg", "Terrano.jpg", "Almera.jpg"],
                 ["NivaLegend.jpg", "VestaCross.jpg", "PrioraHB.jpg", "XRAY.jpg", "KalinaSport.jpg", "4x4Urban.jpg"],
                 ["Stinger.jpg", "Ceed.jpg", "Rio.jpg", "K5.jpg", "Mohave.jpg", "Picanto.jpg"],

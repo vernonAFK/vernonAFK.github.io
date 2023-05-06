@@ -125,3 +125,27 @@ body {
         align-self: flex-end;
     }
 
+@media (max-width: 1600px) {
+    .model {
+        margin: 2% 6% 2% 6%;
+        width: 32em;
+        height: 15em;
+    }
+
+    .model img {
+        width: 48%;
+    }
+
+    .littleInfo {
+        font-size: 18px;
+        margin-top: -26%;
+    }
+}
+
+@media (max-width: 960px) {
+    
+}
+
+@media (max-width: 375px) {
+    
+}
