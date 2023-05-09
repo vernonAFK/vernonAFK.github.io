@@ -147,6 +147,10 @@ body {
     .search-box {
         width: 22em;
     }
+    
+    .models {
+        width: 100%;
+    }
 
     .model {
         padding: 1%;
