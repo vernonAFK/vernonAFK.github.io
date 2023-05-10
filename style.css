@@ -15,7 +15,7 @@ body {
 
 @keyframes up {
     to {
-        margin-top: -8em;
+        margin-top: 1em;
     }
 }
 
