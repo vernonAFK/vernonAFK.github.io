@@ -2,7 +2,7 @@ const searchBox = document.getElementsByClassName('search-box')
 const input = document.querySelector('input');
 
 const models_block = document.getElementById('models');
-const model_blocks = document.querySelectorAll('.model');
+// const model_blocks = document.querySelectorAll('.model');
 const models_name = document.getElementsByTagName('p');
 const littleInfo = document.getElementsByClassName('littleInfo');
 const models_img = document.getElementsByTagName('img');
@@ -10,13 +10,15 @@ const models_img = document.getElementsByTagName('img');
 const info = document.getElementById('info');
 const text = document.getElementsByClassName('text');
 
+let countDiv = 0;
+
 input.addEventListener('keydown', function(e) {
     if (e.keyCode === 13) {
         if (input.value.length == 0) {
             alert("Поле не должно быть пустым!");
             return;
         } else {
-            input.readOnly = true;
+            // input.readOnly = true;
             const auto = 
             [
                 ["audi", "ауди"],
@@ -133,7 +135,7 @@ input.addEventListener('keydown', function(e) {
                 for (let j = 0; j < auto[i].length; j++) {
 
                     if (request == auto[i][j]) {
-                        input.setAttribute('disabled', 'disabled');
+                        // input.setAttribute('disabled', 'disabled');
                         brand = auto[i][0];
                         models_block.style = "visibility: visible; opacity: 1;";
                         searchBox[0].style = "animation: up 1s ease 1; animation-fill-mode: forwards;";
@@ -157,9 +159,20 @@ input.addEventListener('keydown', function(e) {
                 newDiv.appendChild(div);
 
                 models_block.appendChild(newDiv);
+                countDiv += 1;
+            }
+
+            function deleteDivs() {
+                const deleteThis = document.getElementsByClassName('model');
+                
+                while (countDiv > 0) {
+                    models_block.removeChild(deleteThis[countDiv - 1]);
+                    countDiv -= 1;
+                }
             }
 
             if (brand == "audi") {
+                deleteDivs();
                 for (let i = 0; i < models[0].length; i++) {
                     addNewDiv();
                     models_name[i].innerHTML = models[0][i];
@@ -214,6 +227,7 @@ input.addEventListener('keydown', function(e) {
             }
 
             if (brand == "bmw") {
+                deleteDivs();
                 for (let i = 0; i < models[1].length; i++) {
                     addNewDiv();
                     models_name[i].innerHTML = models[1][i];
@@ -224,6 +238,7 @@ input.addEventListener('keydown', function(e) {
             }
 
             if (brand == "ford") {
+                deleteDivs();
                 for (let i = 0; i < models[2].length; i++) {
                     addNewDiv();
                     models_name[i].innerHTML = models[2][i];
@@ -234,6 +249,7 @@ input.addEventListener('keydown', function(e) {
             }
 
             if (brand == "porsche") {
+                deleteDivs();
                 for (let i = 0; i < models[3].length; i++) {
                     addNewDiv();
                     models_name[i].innerHTML = models[3][i];
@@ -244,6 +260,7 @@ input.addEventListener('keydown', function(e) {
             }
 
             if (brand == "ferrari") {
+                deleteDivs();
                 for (let i = 0; i < models[4].length; i++) {
                     addNewDiv();
                     models_name[i].innerHTML = models[4][i];
@@ -254,6 +271,7 @@ input.addEventListener('keydown', function(e) {
             }
             
             if (brand == "mercedes") {
+                deleteDivs();
                 for (let i = 0; i < models[5].length; i++) {
                     addNewDiv();
                     models_name[i].innerHTML = models[5][i];
@@ -313,8 +331,8 @@ input.addEventListener('keydown', function(e) {
                 return;
             }
         }
-        input.removeAttribute('disabled');
-        input.readOnly = false;
+        // input.removeAttribute('disabled');
+        // input.readOnly = false;
         alert("Марка не найдена!");
     }
 });
