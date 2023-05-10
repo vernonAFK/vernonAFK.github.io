@@ -10,7 +10,9 @@ const models_img = document.getElementsByTagName('img');
 const info = document.getElementById('info');
 const mainPhoto = document.getElementById('mainPhoto');
 const photo = document.querySelectorAll('.photo');
-const text = document.getElementById('text');
+
+const extraInfo = document.getElementById('extraInfo');
+const extraInfo2 = document.getElementById('extraInfo2');
 const buy = document.getElementById('buy');
 
 let countDiv = 0;
@@ -149,9 +151,28 @@ input.addEventListener('keydown', function(e) {
 
             const extraImg = 
             [
+                // AUDI
                 ["A3.webp", "A4.webp", "A5Coupe.webp", "A6.webp"],
                 ["A7.webp", "A8.webp", "Q3.webp", "Q4E-tron.webp"], 
                 ["Q5.webp", "Q7.webp", "Q8.webp", "RS3.webp"]
+            ]
+
+            const extraLi =
+            [
+                // AUDI
+                ["Audi A3 <br> Класс: Cедан <br> Год: 2023 <br><br> Пространство, объем и вес: <br> Снаряженная масса - 1320 кг <br> Объем топливного бака - 50 л <br> Объем багажного отделения - 425 л <br><br> Размеры: <br> Длина - 4495 мм <br> Ширина - 1816 мм <br> Высота - 1425 мм <br> Колесная база - 2636 мм <br><br> Характеристики производительности: <br> Расход топлива (городской) - 5,9 л/100 км <br> Расход топлива (за городом) - 4,1 л/100 км <br> Расход топлива (смешанный) - 4,8 л/100 км <br> Разгон с 0 до 100 км/ч	- 8,2 с <br> Максимальная скорость - 224 км/ч <br> Тип топлива - Бензин <br> Мощность - 150 л.с. при 6000 об/мин."],
+            ]
+
+            const extraLi2 = 
+            [
+                // AUDI
+                ["Трансмиссия, тормоза и характеристики подвески: <br> Привод - Передний привод <br >Количество передач (автоматическая коробка передач) - 8 <br> Передняя подвеска	- Независимая типа McPherson <br> Задняя подвеска - Независимая многорычажная <br> Передние тормоза - Дисковые вентилируемые <br> Задние тормоза - Дисковые вентилируемые <br> ABS - да <br> Усилитель рулевого управления - Электроусилитель"]
+            ]
+
+            const price = 
+            [
+                // AUDI
+                ["Купить за 3 051 000 ₽"]
             ]
 
             const request = (input.value.replace(/(\.|-|\/|\\| )/g,"")).toLowerCase();
@@ -190,7 +211,6 @@ input.addEventListener('keydown', function(e) {
 
             function deleteDivs() {
                 const deleteThis = document.getElementsByClassName('model');
-
                 while (countDiv > 0) {
                     models_block.removeChild(deleteThis[countDiv - 1]);
                     countDiv -= 1;
@@ -199,13 +219,12 @@ input.addEventListener('keydown', function(e) {
 
             function showModelInfo() {
                 const model_blocks = document.querySelectorAll('.model');
-                
                 model_blocks.forEach(item => {
                     item.addEventListener('click', () => {
                         model = item.querySelector('p').textContent;
 
                         info.style = "visibility: visible; opacity: 1;";
-                        models_block.style = " visibility: visible; opacity: 1; filter: blur(3px); cursor: pointer;";
+                        models_block.style = " visibility: visible; opacity: 1; filter: blur(22px); cursor: pointer;";
                         searchBox[0].style = "animation: up 1s ease 1; animation-fill-mode: forwards; filter: blur(3px); pointer-events: none;";
                         for (let i = 0; i < model_blocks.length; i++) {
                             model_blocks[i].style = "pointer-events: none;";
@@ -217,24 +236,31 @@ input.addEventListener('keydown', function(e) {
                                 photo[0].src = "img/audi/" + extraImg[0][0];
                                 photo[i].src = "img/audi/" + extraImg[0][i];
                             }
+                            extraInfo.innerHTML = extraLi[0][0];
+                            extraInfo2.innerHTML = extraLi2[0][0];
+                            buy.innerHTML = price[0][0];
                         }
         
                         if (model == models[0][1]) {
                             for (let i = 0; i < 4; i++) {
-                                mainPhoto.src = "img/audi/" + extraImg[1][0];
-                                photo[0].src = "img/audi/" + extraImg[1][0];
-                                photo[i].src = "img/audi/" + extraImg[1][i];
+                                mainPhoto.src = "img/audi/" + extraImg[0][1];
+                                photo[0].src = "img/audi/" + extraImg[0][1];
+                                photo[i].src = "img/audi/" + extraImg[0][i];
                             }
                         }
         
                         if (model == models[0][2]) {
                             for (let i = 0; i < 4; i++) {
-                                mainPhoto.src = "img/audi/" + extraImg[2][0];
-                                photo[0].src = "img/audi/" + extraImg[2][0];
-                                photo[i].src = "img/audi/" + extraImg[2][i];
+                                mainPhoto.src = "img/audi/" + extraImg[0][2];
+                                photo[0].src = "img/audi/" + extraImg[0][2];
+                                photo[i].src = "img/audi/" + extraImg[0][i];
                             }
                         }
                     });
+                });
+
+                buy.addEventListener('click', () => {
+                    alert("Спасибо за покупку!");
                 });
 
                 photo.forEach(item => {
