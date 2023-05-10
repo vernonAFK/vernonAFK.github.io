@@ -127,6 +127,22 @@ body {
         align-self: flex-end;
     }
 
+@media screen and (max-width: 1600px) {
+    .model {
+        margin: 2% 6% 2% 6%;
+        width: 32em;
+        height: 15em;
+    }
+    
+        .model img {
+            width: 48%;
+        }
+    
+    .littleInfo {
+        font-size: 18px;
+        margin-top: -26%;
+    }
+}
 
 @media screen and (max-width: 480px) {
     .search-box {
