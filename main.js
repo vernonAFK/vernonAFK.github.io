@@ -18,7 +18,6 @@ input.addEventListener('keydown', function(e) {
             alert("Поле не должно быть пустым!");
             return;
         } else {
-            // input.readOnly = true;
             const auto = 
             [
                 ["audi", "ауди"],
@@ -28,7 +27,6 @@ input.addEventListener('keydown', function(e) {
                 ["ferrari", "феррари", "ферари"],
                 ["mercedes", "mercedesbenz", "мерседес", "мерс", "мерседесбенз", "мерин"],
                 ["nissan", "nisan", "ниссан", "нисан"],
-                ["lada", "лада"],
                 ["kia", "киа"],
                 ["lamborghini", "lambo", "ламборгини", "ламбо", "ламба"],
                 ["toyota", "тойота"],
@@ -42,7 +40,8 @@ input.addEventListener('keydown', function(e) {
                 ["mitsubishi", "lancer", "митсубиси", "лансер"],
                 ["subaru", "субару"],
                 ["suzuki", "сузуки", "сузуке"],
-                ["volvo", "вольво"]
+                ["volvo", "вольво"],
+                ["lada", "лада"]
             ]
 
             const models = 
@@ -63,14 +62,19 @@ input.addEventListener('keydown', function(e) {
                 ["Ferrari 488 Spider", "Ferrari 812 Superfast", "Ferrari FF"],
 
                 // MERCEDES
-                ["Mercedes-Benz A-class", "Mercedes-Benz AMG GT 53"],
+                ["Mercedes-Benz A-Class A 220", "Mercedes-Benz AMG GT 53", "Mercedes-Benz C-Class C 300", "Mercedes-Benz E-Class E 350", "Mercedes-Benz G-Class G 550", "Mercedes-Benz GLE-Class GLE 350", "Mercedes-Benz GLS-Class GLS 450 4MATIC", "Mercedes-Benz Maybach S 680 4MATIC", "Mercedes-Benz S-Class S 580 4MATIC", "Mercedes-Benz SLR McLaren Convertible"],
 
-                ["Nissan GT-R", "Nissan X-Trail", "Nissan Juke", "Nissan Patrol", "Nissan Terrano", "Nissan Almera"],
-                ["LADA Niva Legend", "LADA Vesta Cross", "LADA Priora HB", "LADA XRAY", "LADA Kalina Sport", "LADA 4x4 Urban"],
-                ["KIA Stinger", "KIA Ceed", "KIA Rio", "KIA K5", "KIA Mohave", "KIA Picanto"],
-                ["Lamborghini Murcielago", "Lamborghini Urus", "Lamborghini Aventador S", "Lamborghini Huracan", "Lamborghini Aventador Roadster", "Lamborghini Murcielago Roadster"],
-                ["Toyota Camry", "Toyota RAV4", "Toyota Land Cruiser Prado", "Toyota GT86", "Toyota iQ", "Toyota Prius"]
+                // NISSAN
+                ["Nissan Altima SR", "Nissan GT-R", "Nissan Titan PRO-4X", "Nissan Z"],
 
+                // KIA
+                ["KIA Carnival SX Prestige", "KIA Forte GT", "KIA K5 EX", "KIA Rio S", "KIA Sportage X-Line", "KIA Stinger GT2"],
+
+                // LAMBORGHINI
+                ["Lamborghini Aventador Ultimae", "Lamborghini EVO RWD", "Lamborghini Urus"],
+
+                // TOYOTA
+                ["Toyota Avalon Limited", "Toyota Camry SE", "Toyota Corolla XSE", "Toyota Crown Limited", "Toyota GR Supra 2.0", "Toyota RAV4 Adventure", "Toyota Tundra SR5 Double Cap"]
             ]
 
             const li = 
@@ -91,13 +95,19 @@ input.addEventListener('keydown', function(e) {
                 ["год: 2018 <br> класс: родстеры <br> цена: 24 000 000 ₽", "год: 2018 <br> класс: купе <br> цена: 26 000 000 ₽", "год: 2015 <br> класс: купе <br> цена: 18 000 000 ₽"],
 
                 // MERCEDES
-                ["год: 2022 <br> класс: седан <br> цена: 3 060 000 ₽", "год: 2023 <br> класс: седан <br> цена: 28 870 000 ₽"],
+                ["год: 2022 <br> класс: седан <br> цена: 3 060 000 ₽", "год: 2023 <br> класс: седан <br> цена: 28 870 000 ₽", "год: 2023 <br> класс: седан <br> цена: 5 480 000 ₽", "год: 2023 <br> класс: седан <br> цена: 6 510 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 22 840 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 15 510 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 16 240 000 ₽", "год: 2023 <br> класс: седан <br> цена: 20 770 000 ₽", "год: 2023 <br> класс: седан <br> цена: 19 164 000 ₽", "год: 2009 <br> класс: родстеры <br> цена: 38 200 000 ₽"],
 
-                ["год: 2016 <br> класс: купе <br> цена: 6 875 000 ₽", "год: 2015 <br> класс: компактные SUV <br> цена: 1 790 000 ₽", "год: 2014 <br> класс: компактные SUV <br> цена: 1 107 000 ₽", "год: 2014 <br> класс: компактные SUV <br> цена: 4 750 000 ₽", "год: 2017 <br> класс: компактные SUV <br> цена: 930 000 ₽", "год: 2012 <br> класс: малый средний класс <br> цена: 645 000 ₽"],
-                ["год: 2021 <br> класс: компактные SUV <br> цена: 659 900 ₽", "год: 2018 <br> класс: малый класс <br> цена: 763 900 ₽", "год: 2013 <br> класс: малый средний класс <br> цена: 290 000 ₽", "год: 2015 <br> класс: малый класс <br> цена: 614 900 ₽", "год: 2014 <br> класс: малый класс <br> цена: 566 900 ₽", "год: 2015 <br> класс: компактные SUV <br> цена: 546 800 ₽"],
-                ["год: 2017 <br> класс: бизнес-класс <br> цена: 1 899 000 ₽", "год: 2018 <br> класс: малый средний класс <br> цена: 1 001 000 ₽", "год: 2017 <br> класс: малый класс <br> цена: 695 900 ₽", "год: 2022 <br> класс: средний класс <br> цена: 3 569 900 ₽", "год: 2017 <br> класс: полноразмерные SUV <br> цена: 2 489 900 ₽", "год: 2017 <br> класс: субкомпактный класс <br> цена: 559 900 ₽"],
-                ["год: 2006 <br> класс: купе <br> цена: 20 900 000 ₽", "год: 2017 <br> класс: полноразмерные SUV <br> цена: 15 200 000 ₽", "год: 2016 <br> класс: купе <br> цена: 20 050 000 ₽", "год: 2014 <br> класс: купе <br> цена: 11 150 000 ₽", "год: 2012 <br> класс: родстеры <br> цена: 19 450 000 ₽", "год: 2006 <br> класс: родстеры <br> цена: 19 250 000 ₽"],
-                ["год: 2018 <br> класс: средний класс <br> цена: 1 399 000 ₽", "год: 2019 <br> класс: компактные SUV <br> цена: 1 756 000 ₽", "год: 2017 <br> класс: полноразмерные SUV <br> цена: 2 249 000 ₽", "год: 2012 <br> класс: купе <br> цена: 2 949 000 ₽", "год: 2009 <br> класс: субкомпактный класс <br> цена: 590 000 ₽", "год: 2016 <br> класс: малый средний класс <br> цена: 2 154 000 ₽"]
+                // NISSAN
+                ["год: 2023 <br> класс: седан <br> цена: 1 680 000 ₽", "год: 2023 <br> класс: купе <br> цена: 7 726 000 ₽", "год: 2023 <br> класс: пикап <br> цена: 14 000 000 ₽", "год: 2023 <br> класс: купе <br> цена: 8 690 000 ₽"],
+
+                // KIA
+                ["год: 2023 <br> класс: SUV <br> цена: 5 324 900 ₽", "год: 2023 <br> класс: седан <br> цена: 2 760 000 ₽", "год: 2023 <br> класс: седан <br> цена: 4 569 900 ₽", "год: 2023 <br> класс: седан <br> цена: 1 789 900 ₽", "год: 2023 <br> класс: SUV <br> цена: 2 364 930 ₽", "год: 2023 <br> класс: седан <br> цена: 5 319 900 ₽"],
+
+                // LAMBORGHINI
+                ["год: 2022 <br> класс: купе <br> цена: 38 510 140 ₽", "год: 2022 <br> класс: купе <br> цена: 19 900 000 ₽", "год: 2022 <br> класс: SUV <br> цена: 29 000 000 ₽"],
+
+                // TOYOTA
+                ["год: 2022 <br> класс: седан <br> цена: 3 890 000 ₽", "год: 2023 <br> класс: седан <br> цена: 3 190 000 ₽", "год: 2023 <br> класс: седан <br> цена: 2 465 000 ₽", "год: 2023 <br> класс: седан <br> цена: 2 507 560 ₽", "год: 2023 <br> класс: купе <br> цена: 5 534 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 3 658 000 ₽", "год: 2023 <br> класс: пикап <br> цена: 7 900 000 ₽"],
             ]
 
             const img = 
@@ -118,13 +128,19 @@ input.addEventListener('keydown', function(e) {
                 ["488Spider.webp", "812Superfast.webp", "FF.webp"],
 
                 // MERCEDES
-                ["AClass.webp", "AMGGT53.webp"],
+                ["AClassA220.webp", "AMGGT53.webp", "CClassC300.webp", "EClassE350.webp", "GClassG550.webp", "GLEClassGLE350.webp", "GLSClassGLS4504MATIC.webp", "MaybachS6804MATIC.webp", "SClassS5804MATIC.webp", "SLRMcLarenConvertible.webp"],
 
-                ["GTR.jpg", "XTrail.jpg", "Juke.jpg", "Patrol.jpg", "Terrano.jpg", "Almera.jpg"],
-                ["NivaLegend.jpg", "VestaCross.jpg", "PrioraHB.jpg", "XRAY.jpg", "KalinaSport.jpg", "4x4Urban.jpg"],
-                ["Stinger.jpg", "Ceed.jpg", "Rio.jpg", "K5.jpg", "Mohave.jpg", "Picanto.jpg"],
-                ["Murcielago.jpg", "Urus.jpg", "AventadorS.jpg", "Huracan.jpg", "AventadorRoadster.jpg", "MurcielagoRoadster.jpg"],
-                ["Camry.jpg", "RAV4.jpg", "LandCruiserPrado.jpg", "GT86.jpg", "IQ.jpg", "Prius.jpg"]
+                // NISSAN
+                ["AltimaSR.webp", "GTR.webp", "TitanPRO-4X.webp", "Z.webp"],
+
+                // KIA
+                ["CarnivalSXPrestige.webp", "ForteGT.webp", "K5EX.webp", "RioS.webp", "SportageXLine.webp", "StingerGT2.webp"],
+
+                // LAMBORGHINI
+                ["AventadorUltimae.webp", "HuracanEVORWD.webp", "Urus.webp"],
+
+                // TOYOTA
+                ["AvalonLimited.webp", "CamrySE.webp", "CorollaXSE.webp", "CrownLimited.webp", "GRSupra2.0.webp", "RAV4Adventure.webp", "TundraSR5.webp"]
             ]
 
             const request = (input.value.replace(/(\.|-|\/|\\| )/g,"")).toLowerCase();
@@ -135,7 +151,6 @@ input.addEventListener('keydown', function(e) {
                 for (let j = 0; j < auto[i].length; j++) {
 
                     if (request == auto[i][j]) {
-                        // input.setAttribute('disabled', 'disabled');
                         brand = auto[i][0];
                         models_block.style = "visibility: visible; opacity: 1;";
                         searchBox[0].style = "animation: up 1s ease 1; animation-fill-mode: forwards;";
@@ -282,6 +297,7 @@ input.addEventListener('keydown', function(e) {
             }
 
             if (brand == "nissan") {
+                deleteDivs();
                 for (let i = 0; i < models[6].length; i++) {
                     addNewDiv();
                     models_name[i].innerHTML = models[6][i];
@@ -291,48 +307,39 @@ input.addEventListener('keydown', function(e) {
                 return;
             }
 
-            if (brand == "lada") {
-                for (let i = 0; i < 6; i++) {
+            if (brand == "kia") {
+                deleteDivs();
+                for (let i = 0; i < models[7].length; i++) {
                     addNewDiv();
                     models_name[i].innerHTML = models[7][i];
                     littleInfo[i].innerHTML = li[7][i];
-                    models_img[i].src = "img/lada/" + img[7][i];
-                }
-                return;
-            }
-
-            if (brand == "kia") {
-                for (let i = 0; i < models[8].length; i++) {
-                    addNewDiv();
-                    models_name[i].innerHTML = models[8][i];
-                    littleInfo[i].innerHTML = li[8][i];
-                    models_img[i].src = "img/kia/" + img[8][i];
+                    models_img[i].src = "img/kia/" + img[7][i];
                 }
                 return;
             }
 
             if (brand == "lamborghini") {
-                for (let i = 0; i < 6; i++) {
+                deleteDivs();
+                for (let i = 0; i < models[8].length; i++) {
                     addNewDiv();
-                    models_name[i].innerHTML = models[9][i];
-                    littleInfo[i].innerHTML = li[9][i];
-                    models_img[i].src = "img/lamborghini/" + img[9][i];
+                    models_name[i].innerHTML = models[8][i];
+                    littleInfo[i].innerHTML = li[8][i];
+                    models_img[i].src = "img/lamborghini/" + img[8][i];
                 }
                 return;
             }
 
             if (brand == "toyota") {
-                for (let i = 0; i < 6; i++) {
+                deleteDivs();
+                for (let i = 0; i < models[9].length; i++) {
                     addNewDiv();
-                    models_name[i].innerHTML = models[10][i];
-                    littleInfo[i].innerHTML = li[10][i];
-                    models_img[i].src = "img/toyota/" + img[10][i];
+                    models_name[i].innerHTML = models[9][i];
+                    littleInfo[i].innerHTML = li[9][i];
+                    models_img[i].src = "img/toyota/" + img[9][i];
                 }
                 return;
             }
         }
-        // input.removeAttribute('disabled');
-        // input.readOnly = false;
         alert("Марка не найдена!");
     }
 });
