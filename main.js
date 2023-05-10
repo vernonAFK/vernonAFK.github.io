@@ -8,9 +8,13 @@ const littleInfo = document.getElementsByClassName('littleInfo');
 const models_img = document.getElementsByTagName('img');
 
 const info = document.getElementById('info');
-const text = document.getElementsByClassName('text');
+const mainPhoto = document.getElementById('mainPhoto');
+const photo = document.querySelectorAll('.photo');
+const text = document.getElementById('text');
+const buy = document.getElementById('buy');
 
 let countDiv = 0;
+let model;
 
 input.addEventListener('keydown', function(e) {
     if (e.keyCode === 13) {
@@ -143,6 +147,13 @@ input.addEventListener('keydown', function(e) {
                 ["AvalonLimited.webp", "CamrySE.webp", "CorollaXSE.webp", "CrownLimited.webp", "GRSupra2.0.webp", "RAV4Adventure.webp", "TundraSR5.webp"]
             ]
 
+            const extraImg = 
+            [
+                ["A3.webp", "A4.webp", "A5Coupe.webp", "A6.webp"],
+                ["A7.webp", "A8.webp", "Q3.webp", "Q4E-tron.webp"], 
+                ["Q5.webp", "Q7.webp", "Q8.webp", "RS3.webp"]
+            ]
+
             const request = (input.value.replace(/(\.|-|\/|\\| )/g,"")).toLowerCase();
             let brand;
 
@@ -179,11 +190,69 @@ input.addEventListener('keydown', function(e) {
 
             function deleteDivs() {
                 const deleteThis = document.getElementsByClassName('model');
-                
+
                 while (countDiv > 0) {
                     models_block.removeChild(deleteThis[countDiv - 1]);
                     countDiv -= 1;
                 }
+            }
+
+            function showModelInfo() {
+                const model_blocks = document.querySelectorAll('.model');
+                
+                model_blocks.forEach(item => {
+                    item.addEventListener('click', () => {
+                        model = item.querySelector('p').textContent;
+
+                        info.style = "visibility: visible; opacity: 1;";
+                        models_block.style = " visibility: visible; opacity: 1; filter: blur(3px); cursor: pointer;";
+                        searchBox[0].style = "animation: up 1s ease 1; animation-fill-mode: forwards; filter: blur(3px); pointer-events: none;";
+                        for (let i = 0; i < model_blocks.length; i++) {
+                            model_blocks[i].style = "pointer-events: none;";
+                        }
+
+                        if (model == models[0][0]) {
+                            for (let i = 0; i < 4; i++) {
+                                mainPhoto.src = "img/audi/" + extraImg[0][0];
+                                photo[0].src = "img/audi/" + extraImg[0][0];
+                                photo[i].src = "img/audi/" + extraImg[0][i];
+                            }
+                        }
+        
+                        if (model == models[0][1]) {
+                            for (let i = 0; i < 4; i++) {
+                                mainPhoto.src = "img/audi/" + extraImg[1][0];
+                                photo[0].src = "img/audi/" + extraImg[1][0];
+                                photo[i].src = "img/audi/" + extraImg[1][i];
+                            }
+                        }
+        
+                        if (model == models[0][2]) {
+                            for (let i = 0; i < 4; i++) {
+                                mainPhoto.src = "img/audi/" + extraImg[2][0];
+                                photo[0].src = "img/audi/" + extraImg[2][0];
+                                photo[i].src = "img/audi/" + extraImg[2][i];
+                            }
+                        }
+                    });
+                });
+
+                photo.forEach(item => {
+                    item.addEventListener('click', () => {
+                        mainPhoto.src = item.src;
+                    });
+                });
+
+                setTimeout (
+                    models_block.addEventListener("click", () => {
+                        info.style = "visibility: hidden; opacity: 0;";
+                        models_block.style = " visibility: visible; opacity: 1;";
+                        searchBox[0].style = "animation: up 1s ease 1; animation-fill-mode: forwards;";
+                        for (let i = 0; i < model_blocks.length; i++) {
+                            model_blocks[i].style = "pointer-events: all;";
+                        }
+                    }, 10)
+                );
             }
 
             if (brand == "audi") {
@@ -194,50 +263,7 @@ input.addEventListener('keydown', function(e) {
                     littleInfo[i].innerHTML = li[0][i];
                     models_img[i].src = "img/audi/" + img[0][i];
                 }
-
-                // model_blocks.forEach(item => {
-                //     item.addEventListener('click', () => {
-                //         let model = item.querySelector('p').textContent;
-                //         models_block.style = "visibility: hidden; opacity: 0;";
-                //         info.style = "visibility: visible; opacity: 1;";
-
-                //         if (model == models[0][0]) {
-                //             text[0].innerHTML = "Audi A5";
-                //             text[1].innerHTML = "Audi A5 2";
-                //             text[2].innerHTML = "Audi A5 3";
-                //         }
-
-                //         if (model == models[0][1]) {
-                //             text[0].innerHTML = "Audi A6";
-                //             text[1].innerHTML = "Audi A6 2";
-                //             text[2].innerHTML = "Audi A6 3";
-                //         }
-
-                //         if (model == models[0][2]) {
-                //             text[0].innerHTML = "Audi A8";
-                //             text[1].innerHTML = "Audi A8 2";
-                //             text[2].innerHTML = "Audi A8 3";
-                //         }
-
-                //         if (model == models[0][3]) {
-                //             text[0].innerHTML = "Audi R8";
-                //             text[1].innerHTML = "Audi R8 2";
-                //             text[2].innerHTML = "Audi R8 3";
-                //         }
-
-                //         if (model == models[0][4]) {
-                //             text[0].innerHTML = "Audi S6";
-                //             text[1].innerHTML = "Audi S6 2";
-                //             text[2].innerHTML = "Audi S6 3";
-                //         }
-
-                //         if (model == models[0][5]) {
-                //             text[0].innerHTML = "Audi S7";
-                //             text[1].innerHTML = "Audi S7 2";
-                //             text[2].innerHTML = "Audi S7 3";
-                //         }
-                //     });
-                // });
+                showModelInfo();
                 return;
             }
 
@@ -249,6 +275,7 @@ input.addEventListener('keydown', function(e) {
                     littleInfo[i].innerHTML = li[1][i];
                     models_img[i].src = "img/bmw/" + img[1][i];
                 }
+                showModelInfo();
                 return;
             }
 
@@ -260,6 +287,7 @@ input.addEventListener('keydown', function(e) {
                     littleInfo[i].innerHTML = li[2][i];
                     models_img[i].src = "img/ford/" + img[2][i];
                 }
+                showModelInfo();
                 return;
             }
 
@@ -271,6 +299,7 @@ input.addEventListener('keydown', function(e) {
                     littleInfo[i].innerHTML = li[3][i];
                     models_img[i].src = "img/porsche/" + img[3][i];
                 }
+                showModelInfo();
                 return;
             }
 
@@ -282,6 +311,7 @@ input.addEventListener('keydown', function(e) {
                     littleInfo[i].innerHTML = li[4][i];
                     models_img[i].src = "img/ferrari/" + img[4][i];
                 }
+                showModelInfo();
                 return;
             }
             
@@ -293,6 +323,7 @@ input.addEventListener('keydown', function(e) {
                     littleInfo[i].innerHTML = li[5][i];
                     models_img[i].src = "img/mercedes/" + img[5][i];
                 }
+                showModelInfo();
                 return;
             }
 
@@ -304,6 +335,7 @@ input.addEventListener('keydown', function(e) {
                     littleInfo[i].innerHTML = li[6][i];
                     models_img[i].src = "img/nissan/" + img[6][i];
                 }
+                showModelInfo();
                 return;
             }
 
@@ -315,6 +347,7 @@ input.addEventListener('keydown', function(e) {
                     littleInfo[i].innerHTML = li[7][i];
                     models_img[i].src = "img/kia/" + img[7][i];
                 }
+                showModelInfo();
                 return;
             }
 
@@ -326,6 +359,7 @@ input.addEventListener('keydown', function(e) {
                     littleInfo[i].innerHTML = li[8][i];
                     models_img[i].src = "img/lamborghini/" + img[8][i];
                 }
+                showModelInfo();
                 return;
             }
 
@@ -337,6 +371,7 @@ input.addEventListener('keydown', function(e) {
                     littleInfo[i].innerHTML = li[9][i];
                     models_img[i].src = "img/toyota/" + img[9][i];
                 }
+                showModelInfo();
                 return;
             }
         }

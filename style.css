@@ -32,6 +32,7 @@ body {
     padding: 1em;
     margin: 18% auto;
     border-radius: 2em;
+    transition: all 0.5s ease;
 }
 
     .search-box input {
@@ -56,7 +57,7 @@ body {
     flex-wrap: wrap;
     visibility: hidden;
     opacity: 0;
-    transition: all 2s ease;
+    transition: all 0.5s ease;
     margin-top: 6em;
 }
 
@@ -99,33 +100,70 @@ body {
 }
 
 #info {
-    position: absolute;
+    position: fixed;
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    width: 80%;
+    height: 85%;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
+    background-color: #ffb04865;
+    border-radius: 25px;
+    margin: 1% 10%;
+    border-radius: 15px;
 }
 
-.text {
-    white-space: wrap;
-    font-size: 16px;
+#text {
+    font-size: 22px;
     padding: 1%;
-    background-color: #ffcc3fa2;
-    width: 28em;
-    margin: 1.5%;
-    border-radius: 2em;
+    text-align: justify;
+    width: 50%;
+    height: 100%;
+    /* background-color: aqua; */
 }
 
-    .text#two {
-        align-self: center;
+#photos {
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+}
+
+    #photos img {
+        border-radius: 10px;
+        margin: 1.5%;
     }
 
-    .text#three {
-        align-self: flex-end;
-    }
+#mainPhoto {
+    width: 75%;
+    height: 70%;
+}
+
+.photo {
+    width: 20%;
+    height: 20%;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+#buy {
+    width: 50%;
+    height: 50%;
+    /* background-color: palegreen; */
+    font-size: 22px;
+    padding: 1%;
+    text-align: justify;
+}
 
 @media screen and (max-width: 1600px) {
     .model {
