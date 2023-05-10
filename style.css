@@ -57,6 +57,7 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: all 2s ease;
+    margin-top: 6em;
 }
 
 .model {
