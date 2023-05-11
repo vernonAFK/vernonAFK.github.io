@@ -34,7 +34,7 @@ input.addEventListener('keydown', function(e) {
                 ["nissan", "nisan", "ниссан", "нисан"],
                 ["kia", "киа"],
                 ["lamborghini", "lambo", "ламборгини", "ламбо", "ламба"],
-                ["toyota", "тойота"],
+                ["toyota", "тойота", "тоета", "тоёта"],
                 ["mazda", "мазда"],
                 ["volkswagen", "volks", "wagen", "фольксваген", "ваг", "фолькс"],
                 ["chevrolet", "camaro", "шевроле", "шевролет", "шевро", "камаро"], 
@@ -79,7 +79,13 @@ input.addEventListener('keydown', function(e) {
                 ["Lamborghini Aventador Ultimae", "Lamborghini EVO RWD", "Lamborghini Urus"],
 
                 // TOYOTA
-                ["Toyota Avalon Limited", "Toyota Camry SE", "Toyota Corolla XSE", "Toyota Crown Limited", "Toyota GR Supra 2.0", "Toyota RAV4 Adventure", "Toyota Tundra SR5 Double Cap"]
+                ["Toyota Avalon Limited", "Toyota Camry SE", "Toyota Corolla XSE", "Toyota Crown Limited", "Toyota GR Supra 2.0", "Toyota RAV4 Adventure", "Toyota Tundra SR5 Double Cap"],
+
+                // MAZDA
+                ["Mazda 3 2.5 Turbo", "Mazda CX-5 2.5 Turbo", "Mazda CX-9 Grand Touring", "Mazda MX-5 Miata Club"],
+
+                // VOLKSWAGEN
+                [""]
             ]
 
             const li = 
@@ -113,6 +119,12 @@ input.addEventListener('keydown', function(e) {
 
                 // TOYOTA
                 ["год: 2022 <br> класс: седан <br> цена: 3 890 000 ₽", "год: 2023 <br> класс: седан <br> цена: 3 190 000 ₽", "год: 2023 <br> класс: седан <br> цена: 2 465 000 ₽", "год: 2023 <br> класс: седан <br> цена: 2 507 560 ₽", "год: 2023 <br> класс: купе <br> цена: 5 534 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 3 658 000 ₽", "год: 2023 <br> класс: пикап <br> цена: 7 900 000 ₽"],
+
+                // MAZDA
+                ["год: 2023 <br> класс: хэтчбек <br> цена: 1 753 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 3 645 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 4 585 000 ₽", "год: 2023 <br> класс: родстеры <br> цена: 1 378 000 ₽"],
+
+                // VOLKSWAGEN
+                [""]
             ]
 
             const img = 
@@ -145,7 +157,13 @@ input.addEventListener('keydown', function(e) {
                 ["AventadorUltimae.webp", "HuracanEVORWD.webp", "Urus.webp"],
 
                 // TOYOTA
-                ["AvalonLimited.webp", "CamrySE.webp", "CorollaXSE.webp", "CrownLimited.webp", "GRSupra2.0.webp", "RAV4Adventure.webp", "TundraSR5.webp"]
+                ["AvalonLimited.webp", "CamrySE.webp", "CorollaXSE.webp", "CrownLimited.webp", "GRSupra2.0.webp", "RAV4Adventure.webp", "TundraSR5.webp"],
+
+                // MAZDA
+                ["3_2.5Turbo.webp", "CX5_2.5Turbo.webp", "CX9_GrandTouring.webp", "MX5Miata_Club.webp"],
+
+                // VOLKSWAGEN
+                [""]
             ]
 
             const extraImg = 
@@ -419,6 +437,18 @@ input.addEventListener('keydown', function(e) {
                     models_name[i].innerHTML = models[9][i];
                     littleInfo[i].innerHTML = li[9][i];
                     models_img[i].src = "img/toyota/" + img[9][i];
+                }
+                showModelInfo();
+                return;
+            }
+
+            if (brand == "mazda") {
+                deleteDivs();
+                for (let i = 0; i < models[10].length; i++) {
+                    addNewDiv();
+                    models_name[i].innerHTML = models[10][i];
+                    littleInfo[i].innerHTML = li[10][i];
+                    models_img[i].src = "img/mazda/" + img[10][i];
                 }
                 showModelInfo();
                 return;
