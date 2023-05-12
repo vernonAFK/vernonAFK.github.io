@@ -36,17 +36,15 @@ input.addEventListener('keydown', function(e) {
                 ["lamborghini", "lambo", "ламборгини", "ламбо", "ламба"],
                 ["toyota", "тойота", "тоета", "тоёта"],
                 ["mazda", "мазда"],
-                ["volkswagen", "volks", "wagen", "фольксваген", "ваг", "фолькс"],
-                ["chevrolet", "camaro", "шевроле", "шевролет", "шевро", "камаро"], 
+                ["volkswagen", "volks", "wagen", "фольксваген", "ваг", "ваген", "фолькс"],
+                ["chevrolet", "camaro", "шевроле", "шевролет", "шевро", "камаро", "корвет"], 
+                ["mitsubishi", "lancer", "митсубиси", "лансер"],
+                ["astonmartin", "aston", "martin", "астонмартин", "астон", "мартин"],
                 ["hyundai", "хендай", "хёндай"],
                 ["jaguar", "ягуар", "яга"],
-                ["lexus", "lex", "лексус", "лекс"],
-                ["skoda", "шкода", "скода"],
-                ["mitsubishi", "lancer", "митсубиси", "лансер"],
                 ["subaru", "субару"],
                 ["suzuki", "сузуки", "сузуке"],
-                ["volvo", "вольво"],
-                ["lada", "лада"]
+                ["volvo", "вольво"]
             ]
 
             const models = 
@@ -85,7 +83,22 @@ input.addEventListener('keydown', function(e) {
                 ["Mazda 3 2.5 Turbo", "Mazda CX-5 2.5 Turbo", "Mazda CX-9 Grand Touring", "Mazda MX-5 Miata Club"],
 
                 // VOLKSWAGEN
-                [""]
+                ["Volkswagen Arteon SEL Premium R-Line", "Volkswagen Atlas SEL", "Volkswagen Golf R", "Volkswagen Passat SE", "Volkswagen Tiguan SEL R-Line"],
+
+                // CHEVROLET
+                ["Chevrolet Blazer RS", "Chevrolet Camaro 2SS", "Chevrolet Camaro 3LT", "Chevrolet Camaro ZL1", "Chevrolet Colorado LT", "Chevrolet Corvette Stingray", "Chevrolet Corvette Z06"],
+
+                // MITSUBISHI
+                ["Mitsubishi Lancer Evolution", "Mitsubishi Eclipse Cross SEL", "Mitsubishi Outlander SE"],
+
+                // ASTON MARTIN
+                ["Aston Martin DB11 V8 Volante", "Aston Martin DBS", "Aston Martin DBX", "Aston Martin Vantage V8"],
+
+                // HYUDAI
+                ["Hyundai Palisade XRT", "Hyundai Sonata Limited", "Hyudai Veloster N"],
+
+                // JAGUAR
+                ["Jaguar F-TYPE R", "Jaguar XF P300 R-Dynamic SE"]
             ]
 
             const li = 
@@ -124,7 +137,22 @@ input.addEventListener('keydown', function(e) {
                 ["год: 2023 <br> класс: хэтчбек <br> цена: 1 753 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 3 645 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 4 585 000 ₽", "год: 2023 <br> класс: родстеры <br> цена: 1 378 000 ₽"],
 
                 // VOLKSWAGEN
-                [""]
+                ["год: 2023 <br> класс: хэтчбек <br> цена: 4 800 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 3 790 000 ₽", "год: 2023 <br> класс: хэтчбек <br> цена: 7 450 000 ₽", "год: 2022 <br> класс: SUV <br> цена: 3 300 000 ₽", "год: 2023 <br> класс: хэтчбек <br> цена: 4 150 000 ₽"],
+
+                // CHEVROLET
+                ["год: 2023 <br> класс: SUV <br> цена: 5 900 000 ₽", "год: 2023 <br> класс: купе <br> цена: 6 100 000 ₽", "год: 2023 <br> класс: купе <br> цена: 5 330 000 ₽", "год: 2023 <br> класс: купе <br> цена: 6 650 000 ₽", "год: 2023 <br> класс: пикап <br> цена: 2 200 000 ₽", "год: 2023 <br> класс: купе <br> цена: 7 500 000 ₽", "год: 2023 <br> класс: купе <br> цена: 9 100 000 ₽"],
+
+                // MITSUBISHI
+                ["год: 2015 <br> класс: седан <br> цена: 2 900 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 3 650 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 4 750 000 ₽"],
+
+                // ASTON MARTIN
+                ["год: 2023 <br> класс: родстеры <br> цена: 18 400 000 ₽", "год: 2022 <br> класс: купе <br> цена: 26 450 000 ₽", "год: 2022 <br> класс: SUV <br> цена: 22 750 000 ₽", "год: 2022 <br> класс: купе <br> цена: 9 450 000 ₽"],
+
+                // HYUDAI
+                ["год: 2023 <br> класс: SUV <br> цена: 5 260 000 ₽", "год: 2023 <br> класс: седан <br> цена: 3 439 000 ₽", "год: 2022 <br> класс: хэтчбек <br> цена: 1 459 000 ₽"],
+
+                // JAGUAR
+                ["год: 2023 <br> класс: купе <br> цена: 10 172 000 ₽", "год: 2023 <br> класс: седан <br> цена: 5 220 000 ₽"]
             ]
 
             const img = 
@@ -163,7 +191,22 @@ input.addEventListener('keydown', function(e) {
                 ["3_2.5Turbo.webp", "CX5_2.5Turbo.webp", "CX9_GrandTouring.webp", "MX5Miata_Club.webp"],
 
                 // VOLKSWAGEN
-                [""]
+                ["ArteonSELPremiumRLine.webp", "AtlasSEL.webp", "GolfR.webp", "PassatSE.webp", "TiguanSELRLine.webp"],
+
+                // CHEVROLET
+                ["BlazerRS.webp", "Camaro2SS.webp", "Camaro3LT.webp", "CamaroZL1.webp", "ColoradoLT.webp", "CorvetteStingray.webp", "CorvetteZ06.webp"],
+
+                // MITSUBISHI
+                ["LancerEvolution.webp", "EclipseCrossSEL.webp", "OutlanderSE.webp"],
+
+                // ASTON MARTIN
+                ["DB11V8Volante.webp", "DBS.webp", "DBX.webp", "VantageV8.webp"],
+
+                // HYUDAI
+                ["PalisadeXRT.webp", "SonataLimited.webp", "VelosterN.webp"],
+
+                // JAGUAR
+                ["FTYPER.webp", "XFP300RDynamicSE.webp"]
             ]
 
             const extraImg = 
@@ -449,6 +492,78 @@ input.addEventListener('keydown', function(e) {
                     models_name[i].innerHTML = models[10][i];
                     littleInfo[i].innerHTML = li[10][i];
                     models_img[i].src = "img/mazda/" + img[10][i];
+                }
+                showModelInfo();
+                return;
+            }
+
+            if (brand == "volkswagen") {
+                deleteDivs();
+                for (let i = 0; i < models[11].length; i++) {
+                    addNewDiv();
+                    models_name[i].innerHTML = models[11][i];
+                    littleInfo[i].innerHTML = li[11][i];
+                    models_img[i].src = "img/volkswagen/" + img[11][i];
+                }
+                showModelInfo();
+                return;
+            }
+
+            if (brand == "chevrolet") {
+                deleteDivs();
+                for (let i = 0; i < models[12].length; i++) {
+                    addNewDiv();
+                    models_name[i].innerHTML = models[12][i];
+                    littleInfo[i].innerHTML = li[12][i];
+                    models_img[i].src = "img/chevrolet/" + img[12][i];
+                }
+                showModelInfo();
+                return;
+            }
+
+            if (brand == "mitsubishi") {
+                deleteDivs();
+                for (let i = 0; i < models[13].length; i++) {
+                    addNewDiv();
+                    models_name[i].innerHTML = models[13][i];
+                    littleInfo[i].innerHTML = li[13][i];
+                    models_img[i].src = "img/mitsubishi/" + img[13][i];
+                }
+                showModelInfo();
+                return;
+            }
+
+            if (brand == "astonmartin") {
+                deleteDivs();
+                for (let i = 0; i < models[14].length; i++) {
+                    addNewDiv();
+                    models_name[i].innerHTML = models[14][i];
+                    littleInfo[i].innerHTML = li[14][i];
+                    models_img[i].src = "img/astonmartin/" + img[14][i];
+                }
+                showModelInfo();
+                return;
+            }
+
+            if (brand == "hyundai") {
+                deleteDivs();
+                for (let i = 0; i < models[15].length; i++) {
+                    addNewDiv();
+                    models_name[i].innerHTML = models[15][i];
+                    littleInfo[i].innerHTML = li[15][i];
+                    models_img[i].src = "img/hyundai/" + img[15][i];
+                }
+                showModelInfo();
+                return;
+            }
+
+            if (brand == "jaguar") {
+                deleteDivs();
+                for (let i = 0; i < models[16].length; i++) {
+                    addNewDiv();
+                    models_name[i].innerHTML = models[16][i];
+                    littleInfo[i].innerHTML = li[16][i];
+                    models_img[i].src = "img/jaguar/" + img[16][i];
                 }
                 showModelInfo();
                 return;
