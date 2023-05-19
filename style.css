@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #fae19ba2;
+    background: #88BDBC;
     font-family: 'Roboto', sans-serif;
     width: 100%;
     user-select: none;
@@ -28,7 +28,8 @@ body {
 .search-box {
     font-size: 18px;
     width: 30em;
-    background-color: #ffb04865;
+    background-color: #254E58;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
     padding: 1em;
     margin: 18% auto;
     border-radius: 2em;
@@ -41,12 +42,12 @@ body {
         border: none;
         background-color: transparent;
         padding: 0.5em;
-        color: #4e4e4ed2;
+        color: #b8b6b6;
         cursor: pointer;
     }
 
     .search-box input::placeholder {
-        color: #4e4e4ed2;
+        color: #b8b6b6;
     }
 
 #models {
@@ -65,7 +66,8 @@ body {
     font-size: 18px;
     text-align: center;
     padding: 1.2%;
-    background-color: #ffb04865;
+    background-color: #254E58;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
     width: 35em;
     height: 14em;
     margin: 2% 8% 2% 8%;
@@ -76,7 +78,7 @@ body {
 
     .model p {
         font-size: 22px;
-        color: #4e4e4ed2;
+        color: #b8b6b6;
     }
 
     .model img {
@@ -93,7 +95,7 @@ body {
 
 .littleInfo {
     font-size: 20px;
-    color: #4e4e4ed2;
+    color: #b8b6b6;
     text-align: left;
     margin-left: 55%;
     margin-top: -22%;
@@ -123,11 +125,9 @@ body {
     width: 50%;
     height: 75%;
     color: #4e4e4ed2;
-    /* background-color: aqua; */
 }
 
 #photos {
-    /* background-color: aliceblue; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -178,7 +178,6 @@ body {
 #extraInfo2 {
     width: 50%;
     height: 50%;
-    /* background-color: palegreen; */
     font-size: 22px;
     padding: 1.5%;
     text-align: justify;
