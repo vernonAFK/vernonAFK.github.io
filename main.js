@@ -26,7 +26,7 @@ input.addEventListener('keydown', function(e) {
             const auto = 
             [
                 ["audi", "ауди"],
-                ["bmw", "бмв"],
+                ["bmw", "бмв", "бэха"],
                 ["ford", "форд"],
                 ["porsche", "порш", "порше"],
                 ["ferrari", "феррари", "ферари"],
@@ -43,8 +43,7 @@ input.addEventListener('keydown', function(e) {
                 ["hyundai", "хендай", "хёндай"],
                 ["jaguar", "ягуар", "яга"],
                 ["subaru", "субару"],
-                ["suzuki", "сузуки", "сузуке"],
-                ["volvo", "вольво"]
+                ["volvo", "вольво", "волво"]
             ]
 
             const models = 
@@ -98,7 +97,13 @@ input.addEventListener('keydown', function(e) {
                 ["Hyundai Palisade XRT", "Hyundai Sonata Limited", "Hyudai Veloster N"],
 
                 // JAGUAR
-                ["Jaguar F-TYPE R", "Jaguar XF P300 R-Dynamic SE"]
+                ["Jaguar F-TYPE R", "Jaguar XF P300 R-Dynamic SE", "Jaguar I-PACE HSE"],
+
+                // SUBARU
+                ["Subaru Ascent Onyx Edition", "Subaru BRZ Limited", "Subaru Forester Touring", "Subaru Outback Wilderness", "Subaru WRX GT"],
+
+                // VOLVO
+                ["Volvo S60 T8 Polestar Engineered", "Volvo V60 T8 Polestar Engineered", "Volvo XC40 B4 Ultimate Bright", "Volvo XC90 Recharge T8 Plus Bright"]
             ]
 
             const li = 
@@ -152,7 +157,13 @@ input.addEventListener('keydown', function(e) {
                 ["год: 2023 <br> класс: SUV <br> цена: 5 260 000 ₽", "год: 2023 <br> класс: седан <br> цена: 3 439 000 ₽", "год: 2022 <br> класс: хэтчбек <br> цена: 1 459 000 ₽"],
 
                 // JAGUAR
-                ["год: 2023 <br> класс: купе <br> цена: 10 172 000 ₽", "год: 2023 <br> класс: седан <br> цена: 5 220 000 ₽"]
+                ["год: 2023 <br> класс: купе <br> цена: 10 172 000 ₽", "год: 2023 <br> класс: седан <br> цена: 5 220 000 ₽", "год: 2023 <br> класс: хэтчбек <br> цена: 3 190 000 ₽"],
+
+                // SUBARU
+                ["год: 2023 <br> класс: SUV <br> цена: 3 950 000 ₽", "год: 2023 <br> класс: купе <br> цена: 2 550 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 3 340 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 5 920 900 ₽", "год: 2023 <br> класс: седан <br> цена: 2 810 000 ₽"],
+
+                // VOLVO
+                ["год: 2023 <br> класс: седан <br> цена: 2 930 000 ₽", "год: 2023 <br> класс: универсал <br> цена: 3 400 000 ₽", "год: 2023 <br> класс: SUV <br> цена: 3 100 000 ₽", "год: 2023 <br> класс: SUV EV <br> цена: 5 252 000 ₽"]
             ]
 
             const img = 
@@ -206,14 +217,25 @@ input.addEventListener('keydown', function(e) {
                 ["PalisadeXRT.webp", "SonataLimited.webp", "VelosterN.webp"],
 
                 // JAGUAR
-                ["FTYPER.webp", "XFP300RDynamicSE.webp"]
+                ["FTYPER.webp", "XFP300RDynamicSE.webp", "IPACEHSE.webp"],
+
+                // SUBARU
+                ["AscentOnyxEdition.webp", "BRZLimited.webp", "ForesterTouring.webp", "OutbackWilderness.webp", "WRXGT.webp"],
+
+                // VOLVO
+                ["S60T8PolestarEngineered.webp", "V60T8PolestarEngineered.webp", "XC40B4UltimateBright.webp", "XC90RechargeT8PlusBright.webp"]
             ]
 
             const extraImg = 
             [
                 // AUDI
+                // A3
                 ["A3.webp", "A4.webp", "A5Coupe.webp", "A6.webp"],
-                ["A7.webp", "A8.webp", "Q3.webp", "Q4E-tron.webp"], 
+
+                // A4
+                ["A7.webp", "A8.webp", "Q3.webp", "Q4E-tron.webp"],
+
+                // A5 Coupe
                 ["Q5.webp", "Q7.webp", "Q8.webp", "RS3.webp"]
             ]
 
@@ -221,16 +243,16 @@ input.addEventListener('keydown', function(e) {
             [
                 // AUDI
                 // A3
-                ["Audi A3 <br> Класс: Cедан <br> Год: 2023 <br><br> Пространство, объем и вес: <br> Снаряженная масса - 1320 кг <br> Объем топливного бака - 50 л <br> Объем багажного отделения - 425 л <br><br> Размеры: <br> Длина - 4495 мм <br> Ширина - 1816 мм <br> Высота - 1425 мм <br> Колесная база - 2636 мм <br><br> Характеристики производительности: <br> Расход топлива (городской) - 5,9 л/100 км <br> Расход топлива (за городом) - 4,1 л/100 км <br> Расход топлива (смешанный) - 4,8 л/100 км <br> Разгон с 0 до 100 км/ч	- 8,2 с <br> Максимальная скорость - 224 км/ч <br> Тип топлива - Бензин <br> Мощность - 150 л.с. при 6000 об/мин.", 
+                ["Audi A3 <br> Класс: Cедан <br> Год: 2023 <br> Цена: 3 051 000 ₽ <br><br> Пространство, объем и вес: <br> Снаряженная масса - 1320 кг <br> Объем топливного бака - 50 л <br> Объем багажного отделения - 425 л <br><br> Размеры: <br> Длина - 4495 мм <br> Ширина - 1816 мм <br> Высота - 1425 мм <br> Колесная база - 2636 мм <br><br> Характеристики производительности: <br> Расход топлива (городской) - 5,9 л/100 км <br> Расход топлива (за городом) - 4,1 л/100 км <br> Расход топлива (смешанный) - 4,8 л/100 км <br> Разгон с 0 до 100 км/ч	- 8,2 с <br> Максимальная скорость - 224 км/ч <br> Тип топлива - Бензин <br> Мощность - 150 л.с. при 6000 об/мин.", 
 
                 // A4
-                "Audi A4 <br> Класс: седан <br> Год: 2023 <br><br> Пространство, объем и вес: <br> Снаряженная масса - 1470 кг <br> Объем топливного бака - 54 л <br> Объем багажного отделения - 460 л <br><br> Размеры: <br> Длина - 4762 мм <br> Ширина - 1847 мм <br> Высота - 1431 мм <br> Колесная база - 2820 мм <br><br> Характеристики производительности: <br> Расход топлива (городской) - 7,2-7,5 л/100 км <br> Расход топлива (за городом) - 4,6-5,0 л/100 км <br> Расход топлива (смешанный) - 5,9-7,0 л/100 км <br> Разгон с 0 до 100 км/ч - 8,9 с <br> Максимальная скорость - 210 км/ч <br> Тип топлива - Бензин <br> Мощность - 150 л.с. при 4000-6000 об/мин."],
+                "Audi A4 <br> Класс: седан <br> Год: 2023 <br> Цена: 4 002 000 ₽ <br><br> Пространство, объем и вес: <br> Снаряженная масса - 1470 кг <br> Объем топливного бака - 54 л <br> Объем багажного отделения - 460 л <br><br> Размеры: <br> Длина - 4762 мм <br> Ширина - 1847 мм <br> Высота - 1431 мм <br> Колесная база - 2820 мм <br><br> Характеристики производительности: <br> Расход топлива (городской) - 7,2-7,5 л/100 км <br> Расход топлива (за городом) - 4,6-5,0 л/100 км <br> Расход топлива (смешанный) - 5,9-7,0 л/100 км <br> Разгон с 0 до 100 км/ч - 8,9 с <br> Максимальная скорость - 210 км/ч <br> Тип топлива - Бензин <br> Мощность - 150 л.с. при 4000-6000 об/мин."],
             ]
 
             // https://cenyavto.com/
 
             /* 
-            Audi A3 <br> Класс: <br> Год: <br><br> Пространство, объем и вес: <br> Снаряженная масса - <br> Объем топливного бака - <br> Объем багажного отделения - <br><br> Размеры: <br> Длина - <br> Ширина - <br> Высота - <br> Колесная база - <br><br> Характеристики производительности: <br> Расход топлива (городской) - <br> Расход топлива (за городом) - <br> Расход топлива (смешанный) - <br> Разгон с 0 до 100 км/ч	- <br> Максимальная скорость - <br> Тип топлива - <br> Мощность -
+            Audi A3 <br> Класс: <br> Год: <br> Цена: <br><br> Пространство, объем и вес: <br> Снаряженная масса - <br> Объем топливного бака - <br> Объем багажного отделения - <br><br> Размеры: <br> Длина - <br> Ширина - <br> Высота - <br> Колесная база - <br><br> Характеристики производительности: <br> Расход топлива (городской) - <br> Расход топлива (за городом) - <br> Расход топлива (смешанный) - <br> Разгон с 0 до 100 км/ч	- <br> Максимальная скорость - <br> Тип топлива - <br> Мощность -
             */
 
             const extraLi2 = 
@@ -247,10 +269,10 @@ input.addEventListener('keydown', function(e) {
             Трансмиссия, тормоза и характеристики подвески: <br> Привод - <br> Количество передач (автоматическая коробка передач) - <br> Передняя подвеска	- <br> Задняя подвеска - <br> Передние тормоза - <br> Задние тормоза - <br> ABS - <br> Усилитель рулевого управления -
             */
 
-            const price = 
+            const call = 
             [
                 // AUDI
-                ["Купить за 3 051 000 ₽", "Купить за 4 002 000 ₽"]
+                ["+7 (495) 126-16-17"]
             ]
 
             const request = (input.value.replace(/(\.|-|\/|\\| )/g,"")).toLowerCase();
@@ -302,12 +324,13 @@ input.addEventListener('keydown', function(e) {
                         model = item.querySelector('p').textContent;
 
                         info.style = "visibility: visible; opacity: 1;";
-                        models_block.style = " visibility: visible; opacity: 1; filter: blur(22px); cursor: pointer;";
+                        models_block.style = " visibility: visible; opacity: 1; filter: blur(10px); cursor: pointer;";
                         searchBox[0].style = "animation: up 1s ease 1; animation-fill-mode: forwards; filter: blur(3px); pointer-events: none;";
                         for (let i = 0; i < model_blocks.length; i++) {
                             model_blocks[i].style = "pointer-events: none;";
                         }
 
+                        let phone;
                         if (model == models[0][0]) {
                             for (let i = 0; i < 4; i++) {
                                 mainPhoto.src = "img/audi/" + extraImg[0][0];
@@ -316,7 +339,7 @@ input.addEventListener('keydown', function(e) {
                             }
                             extraInfo.innerHTML = extraLi[0][0];
                             extraInfo2.innerHTML = extraLi2[0][0];
-                            buy.innerHTML = price[0][0];
+                            phone = call[0][0];
                         }
         
                         if (model == models[0][1]) {
@@ -327,7 +350,7 @@ input.addEventListener('keydown', function(e) {
                             }
                             extraInfo.innerHTML = extraLi[0][1];
                             extraInfo2.innerHTML = extraLi2[0][1];
-                            buy.innerHTML = price[0][1];
+                            phone = call[0][0];
                         }
         
                         if (model == models[0][2]) {
@@ -336,15 +359,30 @@ input.addEventListener('keydown', function(e) {
                                 photo[0].src = "img/audi/" + extraImg[2][0];
                                 photo[i].src = "img/audi/" + extraImg[2][i];
                             }
+                            extraInfo.innerHTML = extraLi[0][1];
+                            extraInfo2.innerHTML = extraLi2[0][1];
+                            phone = call[0][0];
                         }
 
+                        buy.addEventListener("mouseover", () => {
+                            buy.innerHTML = phone;
+                            
+                        });
 
+                        buy.addEventListener("mouseout", () => {
+                            buy.innerHTML = "Показать телефон дилера";
+                        });
+                    
+                        buy.addEventListener("click", async (event) => {
+                            const text = event.target.innerText;
+                            await navigator.clipboard.writeText(text);
+                            buy.innerHTML = "Телефон скопирован!";
 
+                            setTimeout(() => {
+                                buy.innerHTML = "Показать телефон дилера"; 
+                            }, 555)
+                        });
                     });
-                });
-
-                buy.addEventListener('click', () => {
-                    alert("Спасибо за покупку!");
                 });
 
                 photo.forEach(item => {
@@ -564,6 +602,30 @@ input.addEventListener('keydown', function(e) {
                     models_name[i].innerHTML = models[16][i];
                     littleInfo[i].innerHTML = li[16][i];
                     models_img[i].src = "img/jaguar/" + img[16][i];
+                }
+                showModelInfo();
+                return;
+            }
+
+            if (brand == "subaru") {
+                deleteDivs();
+                for (let i = 0; i < models[17].length; i++) {
+                    addNewDiv();
+                    models_name[i].innerHTML = models[17][i];
+                    littleInfo[i].innerHTML = li[17][i];
+                    models_img[i].src = "img/subaru/" + img[17][i];
+                }
+                showModelInfo();
+                return;
+            }
+
+            if (brand == "volvo") {
+                deleteDivs();
+                for (let i = 0; i < models[18].length; i++) {
+                    addNewDiv();
+                    models_name[i].innerHTML = models[18][i];
+                    littleInfo[i].innerHTML = li[18][i];
+                    models_img[i].src = "img/volvo/" + img[18][i];
                 }
                 showModelInfo();
                 return;
