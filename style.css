@@ -51,6 +51,14 @@ body {
         color: #b8b6b6;
     }
 
+#lupa {
+    color: #b8b6b6;
+    height: 1.5em; 
+    width: 1.5em;
+    position: relative;
+    top: 3px;
+}
+
 #models {
     width: 100%;
     position: absolute;
@@ -122,11 +130,10 @@ body {
 #extraInfo {
     font-size: 22px;
     padding: 1.5%;
-    text-align: justify;
     width: 45%;
     margin: 1.5%;
     border-radius: 15px;
-    height: 80%;
+    height: 82%;
     color: #b8b6b6;
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
 }
@@ -185,10 +192,9 @@ body {
 
 #extraInfo2 {
     width: 47%;
-    height: 40%;
+    height: 38%;
     font-size: 22px;
     padding: 1.5%;
-    text-align: justify;
     color: #b8b6b6;
     margin-bottom: 3%;
     border-radius: 15px;
