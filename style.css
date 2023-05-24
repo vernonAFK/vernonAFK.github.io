@@ -38,6 +38,7 @@ body {
 
     .search-box input {
         font-size: 26px;
+        width: 18em;
         outline: none;
         border: none;
         background-color: transparent;
@@ -58,7 +59,7 @@ body {
     flex-wrap: wrap;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-out;
     margin-top: 6em;
 }
 
@@ -111,7 +112,7 @@ body {
     height: 90%;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-out;
     background-color: #254E58;
     margin: 1% 10%;
     border-radius: 15px;
