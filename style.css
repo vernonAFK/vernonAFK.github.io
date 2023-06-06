@@ -19,6 +19,18 @@ body {
     }
 }
 
+h1 {
+    position: absolute;
+    font-size: 315px;
+    margin-left: 5%;
+    margin-top: 5%;
+    color: #d4d3d38f;
+}
+
+h1 span {
+    margin-left: 40%;
+}
+
 .container {
     position: absolute;
     width: 100%;
